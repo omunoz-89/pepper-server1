@@ -1,4 +1,4 @@
-import { firebaseAdmin } from 'firebase-admin';
+import firebaseAdmin  from 'firebase-admin';
 import logging from '../config/logging';
 import { Request, Response, NextFunction } from 'express';
 

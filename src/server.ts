@@ -5,6 +5,7 @@ import logging from './config/logging';
 import config from './config/config'
 import mongoose from 'mongoose';
 import firebaseAdmin from 'firebase-admin';
+import userRoutes from './routes/user'
 
 const router = express()
 
@@ -50,6 +51,8 @@ router.use((req, res, next) => {
 
     next();
 });
+
+router.use('/users', userRoutes)
 
 
 router.use((req, res, next) => {

@@ -10,7 +10,7 @@ const router = express()
 
 const httpServer = http.createServer(router);
 
-let serviceAccountKey = require('./config/key.json');
+let serviceAccountKey = require('./config/serviceAccountkey.json');
 
 firebaseAdmin.initializeApp({
     credential: firebaseAdmin.credential.cert(serviceAccountKey)

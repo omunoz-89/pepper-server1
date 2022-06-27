@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.get('/validate', extractFireBaseInfo, controller.validate);
 router.get('/:userID', controller.read);
-router.post('/create', controller.create);
-router.post('/login', controller.login);
+router.post('/create', extractFireBaseInfo, controller.create);
+router.post('/login', extractFireBaseInfo, controller.login);
 router.get('/', controller.readAll);
 
 export = router;
